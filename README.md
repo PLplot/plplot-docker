@@ -6,3 +6,5 @@ This project provides:
 
 (2) Code to run the tests and analyze the results.
 
+
+The PLplot docker image repository is [here](https://hub.docker.com/u/plplot/)
