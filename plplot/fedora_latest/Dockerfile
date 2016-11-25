@@ -52,5 +52,8 @@ RUN mkdir plplot-build
 # Copy in the test shell script
 COPY ./test_plplot.sh ./
 
+# Record when this image was made
+RUN date > image_date.txt
+
 # This is what what gets run when this is started.
 CMD sh test_plplot.sh
