@@ -9,15 +9,15 @@ RUN apt --yes install apt-utils
 # Get dependencies, these are in alphabetical order
 RUN apt --yes install camlidl
 RUN apt --yes install cmake
+RUN apt --yes install default-jdk
+RUN apt --yes install default-jre
+RUN apt --yes install fonts-freefont-ttf
 RUN apt --yes install gcc
 RUN apt --yes install gdc
 RUN apt --yes install gfortran
 RUN apt --yes install git
 RUN apt --yes install gnat
 RUN apt --yes install g++
-RUN apt --yes install default-jdk
-RUN apt --yes install default-jre
-RUN apt --yes install fonts-freefont-ttf
 RUN apt --yes install itcl3
 RUN apt --yes install itcl3-dev
 RUN apt --yes install libcairo-dev
