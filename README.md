@@ -1,4 +1,4 @@
-### PLplot ###
+### PLplot Docker ###
 
 This project provides:
 
@@ -8,3 +8,15 @@ This project provides:
 
 
 The PLplot docker image repository is [here](https://hub.docker.com/u/plplot/)
+
+### Basic Testing ###
+
+```sh
+docker run plplot/XXX 2>&1 | tee XXX.txt
+```
+
+Where XXX is a docker image, for example:
+
+```sh
+docker run plplot/debian-latest 2>&1 | tee debian-latest.txt
+```
