@@ -16,12 +16,18 @@ parser = argparse.ArgumentParser(description = 'Batch testing of PLplot in vario
 parser.add_argument('--max_processes', dest='maxp', type=int, required=False, default=2,
                     help = "The maximum number of processes to run in parallel.")
 
+parser.add_argument('--plplot_repo', dest='plplot_repo', type=str, required=False, default="",
+                    help = "Absolute path to a local repository.")
+
 args = parser.parse_args()
 
 
 def mp_worker(docker_image):
     print("Starting", docker_image)
-    cmd = ["docker", "run", docker_image]
+    if (len(args.plplot_repo) > 0):
+        cmd = ["docker", "run", "-v", args.plplot_repo + ":/plplot_repo", docker_image]        
+    else:
+        cmd = ["docker", "run", docker_image]
     out = subprocess.check_output(cmd, stderr = subprocess.STDOUT)
     with open(docker_image.split("/")[1] + ".txt", "wb") as outfp:
         outfp.write(out)
