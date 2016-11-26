@@ -54,5 +54,8 @@ MAINTAINER Hazen Babcock <hbabcock@mac.com>
 # Copy in the test shell script
 #COPY ./test_plplot.sh ./
 
+# Volume for testing a local repo
+#VOLUME ["/plplot_repo"]
+
 # This is what what gets run when this is started.
 #CMD sh test_plplot.sh
