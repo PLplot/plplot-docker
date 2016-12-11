@@ -28,5 +28,5 @@ more CMakeCache.txt
 echo "<!-- make  -->"
 make VERBOSE=1
 echo "<!-- ctest -->"
-ctest --verbose
+ctest --verbose $CTESTARGS
 echo "<!-- done  -->"
